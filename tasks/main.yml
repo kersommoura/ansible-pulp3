@@ -39,8 +39,7 @@
 
 - name: Install pulpcore
   pip:
-    name: pulpcore
-    state: present
+    name: git+https://github.com/pulp/pulp/tree/3.0-dev
     virtualenv: "{{ pulp_venv }}"
     virtualenv_command: "{{ ansible_python_interpreter }} -m venv"
   become_user: "{{ pulp_user }}"
